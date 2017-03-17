@@ -33,11 +33,11 @@
 				var resultreadfilearr = [];
 				var resultreadfile = ""
 				var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
-				reader.open('get', evt, true); 
+				reader.open('get', evt, false); 
 				
 				if (reader.readyState === 4 && reader.status === 200) {  
 					resultreadfile = reader.responseText; 
-					resultreadfilearr = reader.responseText.split("\n"); // Will separate each line into an array
+					resultreadfilearr = reader.responseText.split("\n"); 
 				}
 				
 				for (var i = 0; i < resultreadfilearr.length; i++) {
@@ -48,9 +48,7 @@
 					else{
 						document.getElementById("textanimation").innerHTML += "<p>" + resultreadfilearr[i] + "</p><hr />";
 					}
-
 				}
-				reader.send(null)
 			}
 			//fuck yourself
 			//then you can kill yourself :D
