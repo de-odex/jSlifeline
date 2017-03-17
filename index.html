@@ -54,10 +54,11 @@
 									vind[j] = i+1
 									text1 = resultreadfilearr[vind[1]]
 									text2 = resultreadfilearr[vind[2]]
+									console.log(text1 + ", " + text2)
 									if (j==1)
-										$(".1").one("click", function() {readtxt(resultreadfilearr[vind1]);this.style.backgroundColor = "green";})
+										$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";})
 									if (j==2) 
-										$(".2").one("click", function() {readtxt(resultreadfilearr[vind2]);this.style.backgroundColor = "green";})
+										$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";})
 										j=0
 									j++
 									i++
