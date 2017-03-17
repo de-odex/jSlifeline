@@ -45,7 +45,7 @@
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); 
 						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) {
-							setTimeout(function(){
+							//setTimeout(function(){
 								if (resultreadfilearr[i].substr(0, 1) == "$"){
 									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
 									if (j==2) 
@@ -56,7 +56,7 @@
 								else{
 									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<p>" + resultreadfilearr[i] + "</p><hr />")
 								}
-							},1000);
+							//},1000);
 						}
 					}
 				}
