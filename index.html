@@ -119,14 +119,14 @@
 				<p>What is your name?: </p><input type="text" id="nameinput"/><input type="button" id="namebtn"/>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function intro(){
+				name = document.getElementById("nameinput").value
+				document.getElementById("textanimation").insertAdjacentHTML('afterbegin', "<p>Hi " + name + ", A high school student is missing. You, as an investigator, have to look for clues and find the girl and the kidnapper.</p>"
+			}
+			document.getElementById("namebtn").addEventListener("click", function(){
+				intro(); this.disabled = true
+			})
+		</script>
 	</body
-	<script type="text/javascript">
-		function intro(){
-			name = document.getElementById("nameinput").value
-			document.getElementById("textanimation").insertAdjacentHTML('afterbegin', "<p>Hi " + name + ", A high school student is missing. You, as an investigator, have to look for clues and find the girl and the kidnapper.</p>"
-		}
-		document.getElementById("namebtn").addEventListener("click", function(){
-			intro(); this.disabled = true
-		})
-	</script>
 </html>
