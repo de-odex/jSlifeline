@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project Template</title>
+		<meta charset="UTF-8"/>
+		<script type="text/javascript" src="./jquery/jquery.js"></script>			<!--for consistency and speed-->
+		<script type="text/javascript" src="./jquery-ui/jquery-ui.js"></script>		<!--same as above-->
+		<script type="text/javascript">
+			//tasks: jquery UI animate, js read text, etc... 
+			//day night cycle | if black to white jS PLEASE!!!!! //success
+			function daynight(hrmin){ //time in minutes
+				var time = (Number(String(hrmin).substr(0,2))*60)+Number(String(hrmin).substr(2,2))
+				var percent = Math.abs(time/720-1);	
+				var invvalue = (1 - percent)*255;
+				var invbgColor = '#' + (Number(invvalue.toFixed())).toString(16) + (Number(invvalue.toFixed())).toString(16) + (Number(invvalue.toFixed())).toString(16);
+				document.body.style["backgroundColor"] = invbgColor
+				if (percent > 0.5){
+					for (i = 0;i<document.getElementsByTagName("P").length;i++){
+						document.getElementsByTagName("P")[i].style["color"] = "white" 
+					}
+				}
+				else{
+					for (i = 0;i<document.getElementsByTagName("P").length;i++){
+						document.getElementsByTagName("P")[i].style["color"] = "black" 
+					}
+				}
+			}
+			//pushdown and fadeout the old messages | jQuery :( unavoidable
+			//50% fade the old elements | jS PLEASE!!!!
+			//clear old elements
+			//read text files | AJAX I HATE YOU
+			function readtxt(evt){
+				var resultreadfilearr = [];
+				var resultreadfile = ""
+				var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+				reader.open('get', evt, true); 
+				
+				if (reader.readyState === 4 && reader.status === 200) {  
+					resultreadfile = reader.responseText; 
+					resultreadfilearr = reader.responseText.split("\n"); // Will separate each line into an array
+				}
+				
+				for (var i = 0; i < resultreadfilearr.length; i++) {
+					if (resultreadfilearr[i].substr(0, 1) == "$"){
+						document.getElementById("textanimation").innerHTML += "<button class=\"1\">" + resultreadfilearr[i+1] + "</button><button class=\"2\">" + resultreadfilearr[i+2] + "</button>";
+					}
+
+					else{
+						document.getElementById("textanimation").innerHTML += "<p>" + resultreadfilearr[i] + "</p><hr />";
+					}
+
+				}
+				reader.send(null)
+			}
+			//fuck yourself
+			//then you can kill yourself :D
+
+
+
+			//when i need it
+			$(function(){
+				$('body, #textcontainer').fadeIn(1500);
+				var time = 0;
+				
+				
+				daynight(00)
+
+				
+			});
+		</script>
+		<style>
+			#textcontainer{
+				width: 300px;
+				margin: auto;
+				text-overflow: clip;
+				display: none;
+			}
+			p{
+				text-align: center;
+				text-overflow: clip;
+			}
+			button{
+				display: block;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="textcontainer">
+			<div id="textanimation">
+				<p> 
+					 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum nunc ac odio vulputate placerat. Vestibulum maximus maximus tortor, et iaculis neque finibus eget. Sed non rhoncus libero. Nulla sit amet lacinia augue, quis porta ex. Vestibulum ut ex tincidunt, faucibus turpis quis, egestas ligula. Aliquam congue sed ipsum et rhoncus. Ut id dolor et urna tempus euismod quis sed ipsum. Nam sapien nunc, viverra quis efficitur vitae, mattis sed velit. <br/>
+				</p>
+				<hr>
+			</div>
+		</div>
+	</body>
+</html>
