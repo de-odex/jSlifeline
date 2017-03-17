@@ -76,6 +76,7 @@
 								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<p>" + resultreadfilearr[i] + "</p><hr />")
 							}
 							daynight(0)
+							$(".done").disabled=true;
 							//},1000);
 						}
 					}
@@ -92,7 +93,7 @@
 				$('body, #textcontainer').fadeIn(1500);
 				var time = 0;
 				daynight(time)
-				$(".done").disabled=true;
+				
 				
 			});
 		</script>
