@@ -28,7 +28,7 @@
 			//pushdown and fadeout the old messages | jQuery :( unavoidable
 			//50% fade the old elements | jS PLEASE!!!!
 			//clear old elements
-			//read text files | AJAX I HATE YOU
+			//read text files | AJAX I HATE YOU //success
 			function readtxt(evt){
 				var resultreadfilearr = [];
 				var resultreadfile = ""
@@ -45,16 +45,18 @@
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); 
 						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) {
-							if (resultreadfilearr[i].substr(0, 1) == "$"){
-								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
-								if (j==2) 
-									j=0
-								j++
-							}
+							setTimeout(function(){
+								if (resultreadfilearr[i].substr(0, 1) == "$"){
+									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
+									if (j==2) 
+										j=0
+									j++
+								}
 
-							else{
-								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<p>" + resultreadfilearr[i] + "</p><hr />")
-							}
+								else{
+									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<p>" + resultreadfilearr[i] + "</p><hr />")
+								}
+							},1000);
 						}
 					}
 				}
