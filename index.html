@@ -47,6 +47,7 @@
 						resultreadfilearr = reader.responseText.split("\n"); 
 					}
 				}
+				reader.send(null);
 				for (var i = 0; i < resultreadfilearr.length; i++) {
 					if (resultreadfilearr[i].substr(0, 1) == "$"){
 						document.getElementById("textanimation").innerHTML += "<input type=\"button\" class=\"1\">" + resultreadfilearr[i+1] + "</input><input type=\"button\" class=\"2\">" + resultreadfilearr[i+2] + "</input>";
