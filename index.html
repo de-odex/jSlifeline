@@ -32,7 +32,7 @@
 			function readtxt(evt){
 				var resultreadfilearr = [];
 				var resultreadfile = ""
-				var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+				var reader = new XMLHttpRequest();
 				reader.open('get', evt, true); 
 				console.log(reader.readyState) //gives 1 (?!?!?!)
 				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
