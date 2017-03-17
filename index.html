@@ -32,6 +32,7 @@
 			//read text files | AJAX I HATE YOU //success
 			var resultreadfilearr = [];
 			var resultreadfile = ""
+			var j = 1;
 			function readtxt(evt){
 				if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 					reader = new XMLHttpRequest();
@@ -45,7 +46,8 @@
 					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); //splits the text to readable ones
-						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) { //parses the text into the document
+
+						for (var i = 0; i < resultreadfilearr.length; i++) { //parses the text into the document
 							//setTimeout(function(){
 								var vind = []
 								if (resultreadfilearr[i].substr(0, 1) == "$"){
