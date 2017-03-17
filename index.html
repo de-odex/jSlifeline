@@ -34,8 +34,8 @@
 				var resultreadfile = ""
 				var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
 				reader.open('get', evt, true); 
-				console.log(reader.readyState)
-				console.log(reader.status)
+				console.log(reader.readyState) //gives 1 (?!?!?!)
+				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
 				if (reader.readyState === 4 && reader.status === 0) {  
 					resultreadfile = reader.responseText; 
 					resultreadfilearr = reader.responseText.split("\n"); 
