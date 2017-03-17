@@ -38,8 +38,6 @@
 				else if (window.ActiveXObject) { // IE
 					reader = new ActiveXObject("Microsoft.XMLHTTP");
 				}
-				console.log(reader.readyState) //gives 1 (?!?!?!)
-				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
 				reader.onreadystatechange = function(){
 					console.log(reader.readyState) 
 					console.log(reader.status)
@@ -54,9 +52,10 @@
 			}
 
 			function arrparser(resultreadfilearr){
-				for (var i = 0; i < resultreadfilearr.length; i++) {
+				for (var i = 0, j; i < resultreadfilearr.length; i++) {
 					if (resultreadfilearr[i].substr(0, 1) == "$"){
-						document.getElementById("textanimation").innerHTML += "<input type=\"button\" class=\"1\">" + resultreadfilearr[i+1] + "</input><input type=\"button\" class=\"2\">" + resultreadfilearr[i+2] + "</input>";
+						document.getElementById("textanimation").innerHTML += "<input type=\"button\" class=\"" + j + "\">" + resultreadfilearr[i] + "</input>";
+						j++
 					}
 
 					else{
@@ -76,7 +75,7 @@
 				
 				
 				daynight(time)
-				readtxt("https://de-odex.github.io/jSlifeline/test.txt")
+				readtxt("test.txt")
 				
 			});
 		</script>

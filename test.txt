@@ -1,4 +1,3 @@
 dongs
-$
-choice1
-choice2
+$choice1
+$choice2
