@@ -54,18 +54,18 @@
 							
 							if (resultreadfilearr[i].substr(0, 1) == "$"){
 								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
-								console.log("j = " + j)
+								console.log("j = " + j) //debug
 								vind[j] = i+1
 								text1 = resultreadfilearr[vind[1]]
 								text2 = resultreadfilearr[vind[2]]
-								console.log(text1 + ", " + text2)
+								console.log(text1 + ", " + text2) //debug
 								if (j==1){
-									console.log("j==1 pass")
-									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").hide})
+									console.log("j==1 pass") //debug
+									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").disabled})
 								}
 								else if (j==2) {
-									console.log("j==2 pass")
-									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$(".1").hide})
+									console.log("j==2 pass") //debug
+									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$(".1").disabled})
 									j=0
 								}
 								j++
@@ -91,9 +91,8 @@
 			$(function(){
 				$('body, #textcontainer').fadeIn(1500);
 				var time = 0;
-				
-				
 				daynight(time)
+				intro()
 				readtxt("a0.txt")
 				
 			});
@@ -118,7 +117,13 @@
 	<body>
 		<div id="textcontainer">
 			<div id="textanimation">
+				<p>What is your name?: </p><input type="text" id="nameinput"/>
 			</div>
 		</div>
-	</body>
+	</body
+	<script type="text/javascript">
+		function intro(){
+						
+		}
+	</script>
 </html>
