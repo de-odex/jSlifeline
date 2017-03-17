@@ -52,8 +52,8 @@
 									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
 									
 									vind[j] = i+1
-									vind1 = vind[1]
-									vind2 = vind[2]
+									text1 = resultreadfilearr[vind[1]]
+									text2 = resultreadfilearr[vind[2]]
 									if (j==1)
 										$(".1").one("click", function() {readtxt(resultreadfilearr[vind1]);this.style.backgroundColor = "green";})
 									if (j==2) 
