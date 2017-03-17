@@ -1,0 +1,7 @@
+*Dorm Manager goes upstairs*
+Dorm Manager: Sir/Ma'am, one of the interns in our school is missing. She looked pale when she was leaving the dorm. I asked her if she’s okay, but she said she’s fine.
+Dorm Manager: When I was doing my rounds at 10pm, she’s not in her room. I immediately called the guards, but they said they couldn’t find her.
+$Okay, go back tomorrow. I will ask some questions
+a3-c1.txt
+$Okay. By tomorrow morning, my team will go to the dorm. We'll be there at 8.
+a3-c2.txt

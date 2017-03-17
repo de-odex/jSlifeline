@@ -1,0 +1,6 @@
+*after 1 minute*
+Assistant: Sir/Ma'am, this is a very important case.
+$I’m reading something.
+a2-c1.txt
+$Okay, let her in.
+a2-c2.txt
