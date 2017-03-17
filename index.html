@@ -49,7 +49,7 @@
 							//setTimeout(function(){
 								if (resultreadfilearr[i].substr(0, 1) == "$"){
 									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
-									document.getElementsByClassName(j)[0].addEventListener("click", readtxt(resultreadfilearr[i+1]))
+									document.getElementsByClassName(j)[0].addEventListener("click", function() {readtxt(resultreadfilearr[i+1]);this.style.backgroundColor = "red";});
 									if (j==2) 
 										j=0
 									j++
