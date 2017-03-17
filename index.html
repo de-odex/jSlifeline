@@ -32,6 +32,7 @@
 			//read text files | AJAX I HATE YOU //success
 			var resultreadfilearr = [];
 			var resultreadfile = ""
+			var curridx = ""
 			function readtxt(evt){
 				if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 					reader = new XMLHttpRequest();
@@ -48,8 +49,9 @@
 						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) { //parses the text into the document
 							//setTimeout(function(){
 								if (resultreadfilearr[i].substr(0, 1) == "$"){
+									curridx = i;
 									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
-									document.getElementsByClassName(j)[0].addEventListener("click", function() {readtxt(resultreadfilearr[i+1]);this.style.backgroundColor = "green";});
+									document.getElementsByClassName(j)[0].addEventListener("click", function() {readtxt(resultreadfilearr[curridx+1]);this.style.backgroundColor = "green";});
 									if (j==2) 
 										j=0
 									j++
