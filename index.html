@@ -44,7 +44,7 @@
 					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); 
-						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) {
+						for (var i = resultreadfilearr.length, j = 1; i > 1; i--) {
 							if (resultreadfilearr[i].substr(0, 1) == "$"){
 								document.getElementById("textanimation").insertAdjacentHTML('afterend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
 								if (j==2) 
