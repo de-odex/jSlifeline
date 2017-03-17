@@ -33,9 +33,11 @@
 				var resultreadfilearr = [];
 				var resultreadfile = ""
 				if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-				    reader = new XMLHttpRequest();
-				} else if (window.ActiveXObject) { // IE
-				    reader = new ActiveXObject("Microsoft.XMLHTTP");
+					reader = new XMLHttpRequest();
+				} 
+				else if (window.ActiveXObject) { // IE
+					reader = new ActiveXObject("Microsoft.XMLHTTP");
+				}
 				reader.open('get', evt, true); 
 				console.log(reader.readyState) //gives 1 (?!?!?!)
 				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
