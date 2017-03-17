@@ -45,7 +45,7 @@
 					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); //splits the text to readable ones
-						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) { //parses the text into the document
+						for (var i = 0, j = 1; i < resultreadfilearr.length; i++, j++) { //parses the text into the document
 							//setTimeout(function(){
 								var vind = []
 								if (resultreadfilearr[i].substr(0, 1) == "$"){
@@ -60,7 +60,6 @@
 									if (j==2) 
 										$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";})
 										j=0
-									j++
 									i++
 								}
 
