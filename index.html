@@ -38,16 +38,20 @@
 				else if (window.ActiveXObject) { // IE
 					reader = new ActiveXObject("Microsoft.XMLHTTP");
 				}
-				reader.open('get', evt, true); 
 				console.log(reader.readyState) //gives 1 (?!?!?!)
 				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
-				reader.onload = function(){
+				reader.onreadystatechange = function(){
 					if (reader.readyState === 4 && reader.status === 200) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); 
 					}
 				}
+				reader.open('GET', evt, true); 
 				reader.send(null);
+				arrparser(resultreadfilearr)
+			}
+
+			function arrparser(resultreadfilearr){
 				for (var i = 0; i < resultreadfilearr.length; i++) {
 					if (resultreadfilearr[i].substr(0, 1) == "$"){
 						document.getElementById("textanimation").innerHTML += "<input type=\"button\" class=\"1\">" + resultreadfilearr[i+1] + "</input><input type=\"button\" class=\"2\">" + resultreadfilearr[i+2] + "</input>";
@@ -70,7 +74,7 @@
 				
 				
 				daynight(time)
-
+				readtxt("https://de-odex.github.io/jSlifeline/test.txt")
 				
 			});
 		</script>
