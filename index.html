@@ -61,11 +61,11 @@
 								console.log(text1 + ", " + text2) //debug
 								if (j==1){
 									console.log("j==1 pass") //debug
-									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$("input.2").disabled=true;$(".2,.1").className = "done"})
+									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").disabled=true;$(".2,.1").className = "done"})
 								}
 								else if (j==2) {
 									console.log("j==2 pass") //debug
-									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$("input.1").disabled=true;$(".2,.1").className = "done"})
+									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$(".1").disabled=true;$(".2,.1").className = "done"})
 									j=0
 								}
 								j++
