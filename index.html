@@ -39,7 +39,7 @@
 				reader.open('get', evt, true); 
 				console.log(reader.readyState) //gives 1 (?!?!?!)
 				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
-				rawFile.onreadystatechange = function (){
+				reader.onload = function(){
 					if (reader.readyState === 4 && reader.status === 200) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); 
