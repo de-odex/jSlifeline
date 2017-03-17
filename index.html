@@ -44,20 +44,23 @@
 					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); 
+						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) {
+							if (resultreadfilearr[i].substr(0, 1) == "$"){
+								document.getElementById("textanimation").innerHTML += "<input type=\"button\" class=\"" + j + "\">" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "</input>";
+								if (j==2) 
+									j=0
+								j++
+							}
+
+							else{
+								document.getElementById("textanimation").innerHTML += "<p>" + resultreadfilearr[i] + "</p><hr />";
+							}
+						}
 					}
 				}
 				reader.open('GET', evt, true); 
 				reader.send(null);
-				for (var i = 0, j = 1; i < resultreadfilearr.length; i++) {
-					if (resultreadfilearr[i].substr(0, 1) == "$"){
-						document.getElementById("textanimation").innerHTML += "<input type=\"button\" class=\"" + j + "\">" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "</input>";
-						j++
-					}
 
-					else{
-						document.getElementById("textanimation").innerHTML += "<p>" + resultreadfilearr[i] + "</p><hr />";
-					}
-				}
 			}
 			//fuck yourself
 			//then you can kill yourself :D
