@@ -61,11 +61,11 @@
 								console.log(text1 + ", " + text2)
 								if (j==1){
 									console.log("j==1 pass")
-									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";})
+									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").hide})
 								}
 								else if (j==2) {
 									console.log("j==2 pass")
-									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";})
+									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$(".1").hide})
 									j=0
 								}
 								j++
