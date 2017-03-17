@@ -92,7 +92,7 @@
 				$('body, #textcontainer').fadeIn(1500);
 				var time = 0;
 				daynight(time)
-				readtxt("a0.txt")
+				
 				
 			});
 		</script>
@@ -122,7 +122,8 @@
 		<script type="text/javascript">
 			function intro(){
 				name = document.getElementById("nameinput").value
-				document.getElementById("textanimation").insertAdjacentHTML('afterbegin', "<p>Hi " + name + ", A high school student is missing. You, as an investigator, have to look for clues and find the girl and the kidnapper.</p>"
+				document.getElementById("textanimation").insertAdjacentHTML('afterbegin', "<p>Hi " + name + ", A high school student is missing. You, as an investigator, have to look for clues and find the girl and the kidnapper.</p>")
+				readtxt("a0.txt")
 			}
 			document.getElementById("namebtn").addEventListener("click", function(){
 				intro(); this.disabled = true
