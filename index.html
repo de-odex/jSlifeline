@@ -46,14 +46,14 @@
 						resultreadfilearr = reader.responseText.split("\n"); 
 						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) {
 							if (resultreadfilearr[i].substr(0, 1) == "$"){
-								document.getElementById("textanimation").insertAdjacentHTML('afterend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
+								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
 								if (j==2) 
 									j=0
 								j++
 							}
 
 							else{
-								document.getElementById("textanimation").insertAdjacentHTML('afterend', "<p>" + resultreadfilearr[i] + "</p><hr />")
+								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<p>" + resultreadfilearr[i] + "</p><hr />")
 							}
 						}
 					}
