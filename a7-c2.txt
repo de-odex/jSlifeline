@@ -1,0 +1,7 @@
+Girl: There is a book written by him. The title is “Renovating old houses.” It is located at the third row, sir/ma’am.
+*User sees the book*
+<i>It looks like she’s in an old house.</i>
+$Check one by one to be sure.
+a8-c1.txt
+$Check page 84.
+a8-c2.txt

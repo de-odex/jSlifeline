@@ -1,0 +1,6 @@
+*assistant approaches the investigator*
+Assistant: Sir/Ma'am, you have a client.
+$Let her in.
+a1-c1.txt
+$I’m busy.
+a1-c2.txt

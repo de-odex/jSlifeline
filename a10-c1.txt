@@ -1,0 +1,5 @@
+<i>The numbers are 15, 1, 90, 13, 8, 72, and 10</i>
+$Are these the coordinates?
+a11-c1.txt
+$Spell out the numbers and look at the start of each word.
+a11-c2.txt

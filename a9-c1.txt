@@ -1,0 +1,5 @@
+<i>There’s also a map with marks on certain numbers.</i>
+$I will record this.
+a10-c1.txt
+$This can lead me to the house. I will look for the pattern.
+a10-c2.txt

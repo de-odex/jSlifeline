@@ -1,0 +1,7 @@
+<i>This says “Fonte St.” There’s only one place here that is named Fonte St. So she’s at #84 Fonte St.<i>
+*go to that place*
+<i>There’s no number 84. </i>
+$Go back, it doesn’t make any sense.
+a12-c1.txt
+$Stay.
+a12-c2.txt
