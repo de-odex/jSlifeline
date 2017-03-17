@@ -1,3 +1,5 @@
 dongs
 $choice1
+a1.txt
 $choice2
+a2.txt

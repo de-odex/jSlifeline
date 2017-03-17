@@ -6,6 +6,7 @@
 		<script type="text/javascript" src="./jquery/jquery.js"></script>			<!--for consistency and speed-->
 		<script type="text/javascript" src="./jquery-ui/jquery-ui.js"></script>		<!--same as above-->
 		<script type="text/javascript">
+			var filename1, filename2
 			//tasks: jquery UI animate, js read text, etc... 
 			//day night cycle | if black to white jS PLEASE!!!!! //success
 			function daynight(hrmin){ //time in minutes
@@ -43,19 +44,21 @@
 					console.log(reader.status)
 					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
 						resultreadfile = reader.responseText; 
-						resultreadfilearr = reader.responseText.split("\n"); 
-						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) {
+						resultreadfilearr = reader.responseText.split("\n"); //splits the text to readable ones
+						for (var i = 0, j = 1; i < resultreadfilearr.length; i++) { //parses the text into the document
 							//setTimeout(function(){
 								if (resultreadfilearr[i].substr(0, 1) == "$"){
-									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
+									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\" onclick=\"readtxt(\\\"" + resultreadfilearr[i]+1 + "\\\")\"></input>")
 									if (j==2) 
 										j=0
 									j++
+									i++
 								}
 
 								else{
 									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<p>" + resultreadfilearr[i] + "</p><hr />")
 								}
+								daynight(0)
 							//},1000);
 						}
 					}
