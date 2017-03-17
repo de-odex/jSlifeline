@@ -61,11 +61,11 @@
 								console.log(text1 + ", " + text2) //debug
 								if (j==1){
 									console.log("j==1 pass") //debug
-									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").disabled})
+									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$("input.2").disabled=true})
 								}
 								else if (j==2) {
 									console.log("j==2 pass") //debug
-									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$(".1").disabled})
+									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$("input.1").disabled=true})
 									j=0
 								}
 								j++
@@ -116,13 +116,17 @@
 	<body>
 		<div id="textcontainer">
 			<div id="textanimation">
-				<p>What is your name?: </p><input type="text" id="nameinput"/>
+				<p>What is your name?: </p><input type="text" id="nameinput"/><input type="button" id="namebtn"/>
 			</div>
 		</div>
 	</body
 	<script type="text/javascript">
 		function intro(){
-						
+			name = document.getElementById("nameinput").value
+			document.getElementById("textanimation").insertAdjacentHTML('afterbegin', "<p>Hi " + name + ", A high school student is missing. You, as an investigator, have to look for clues and find the girl and the kidnapper.</p>"
 		}
+		document.getElementById("namebtn").addEventListener("click", function(){
+			intro(); this.disabled = true
+		})
 	</script>
 </html>

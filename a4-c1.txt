@@ -11,7 +11,7 @@
 *Roommate 2: I agree.*
 *Roommate 1: She doesn’t usually room hop.*
 *Roommate 2: She lost her pencil case one time. Then she lost her Muji pen, with a pink washi tape the next day. She started getting paranoid, as she thinks someone also took her El Fili on the third day. And the next day, someone tore her fictional books.*
-$Thank you, I think I can work with that already. (MISSION FAILED)
+$Thank you, I think I can work with that already.
 a14-c1.txt
 $Thank you for the information. Can I check the dorm now?
 a14-c2.txt
