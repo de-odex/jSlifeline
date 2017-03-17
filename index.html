@@ -36,7 +36,7 @@
 				reader.open('get', evt, true); 
 				console.log(reader.readyState) //gives 1 (?!?!?!)
 				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
-				if (reader.readyState === 4 && reader.status === 0) {  
+				if (reader.readyState === 4 && reader.status === 200) {  
 					resultreadfile = reader.responseText; 
 					resultreadfilearr = reader.responseText.split("\n"); 
 				}
