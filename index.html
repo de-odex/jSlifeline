@@ -51,7 +51,7 @@
 									document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
 									var vind = []
 									vind[j] = i+1
-									document.getElementsByClassName(j)[0].addEventListener("click", function() {readtxt(resultreadfilearr[vind[j]]);this.style.backgroundColor = "green";this.className = "done"});
+									document.getElementsByClassName(j)[0].addEventListener("click", function() {readtxt(resultreadfilearr[vind[j]]);this.style.backgroundColor = "green";this.removeElementListener("click", function() {readtxt(resultreadfilearr[vind[j]]);this.style.backgroundColor = "green"}));
 									if (j==2) 
 										j=0
 									j++
