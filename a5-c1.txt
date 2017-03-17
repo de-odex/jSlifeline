@@ -1,0 +1,13 @@
+<i>I’ve just noticed, why are there missing numbers on their rooms?</i>
+*Dorm Manager: Oh right, I’ve only seen it now, actually. There’s no 4 and 6 in 204 and 206.*
+<i>Who stays at 204 and 206?</i>
+*Dorm Manager: The missing girl is from 206.*
+<i>That’s interesting. Let’s go to her room.</i>
+*Dorm Manager: We checked her room for possible clues. Their room looks the same, except for unusual marks on the rims of her bed.*
+*dorm manager shows the investigator the room*
+*Sees the repetition of the number “205” on the sides.*
+<i>Hmm, there are possibly more clues in room 205.</i>
+$Go to room 205.
+a6-c1.txt
+$Still examine room 206.
+a6-c2.txt

@@ -1,0 +1,9 @@
+<i>Aha, like her roommates told me, she rides a pedicab every friday, but wait. I think that there must be more clues in room 204. Let’s hurry.</i>
+*go to room 204*
+<i>We’re now here, but it seems to have no evident clues. The room’s empty, but there’s only one item in here.</i>
+*Dorm Manager: Oh the clock, yes.*
+<i>It seems to be stuck at 4:30.</i>
+$Conclude that the event happened at 4:30.
+a17-c1.txt
+$4:30, when she always leaves for Trinoma.
+a17-c2.txt

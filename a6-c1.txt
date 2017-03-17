@@ -1,0 +1,8 @@
+*you arrive at room 205*
+*You smell the room, it smells like vanilla.*
+*There are footsteps on the floor, probably of a woman; Sketchers as the brand name.*
+*Dorm Manager: Wait, what’s the connection between the vanilla scent and the pill?*
+$I don’t think there’s a connection between the vanilla scent. It doesn’t make  sense.
+a15.c1.txt
+$If she likes, vanilla, then maybe....
+a15.c2.txt

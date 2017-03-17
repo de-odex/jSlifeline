@@ -1,0 +1,5 @@
+*investigator goes to the girl’s school*
+$Ask Roommates
+a4-c1.txt
+$Go directly to the room
+a4-c2.txt

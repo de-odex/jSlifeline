@@ -1,0 +1,15 @@
+*User also checks for where the hour hand was pointing*
+<i>Oh, look. The hour hand’s pointing on the small gap in between the wall and the bed.</i>
+*Both moved the bed away from the wall*
+*You see a torn page of the book, and a page number. It says: Reinventing Old Houses, p. 84*
+<i>It’s getting late. Maybe National Bookstore has this book, and some clues in it. But, it’s closed as of this moment.</i>
+END OF DAY 2
+DAY 3
+<i>Did a girl ride here going to Trinoma yesterday?</i>
+*Driver: Yes, a girl did. In fact, she was my first rider as I’ve just returned from the province to celebrate New Years’. You are the second.*
+<i>Thank you! 
+*notices that there’s also a small torn page on the pedicab seat, it says: Antoinette Brown, which fits the previously torn page the user found in room 204.*
+$I will now look at the shelves, and find a book written by Antoinette Brown.
+a7-c1.txt
+$(to customer service): Can you check if there’s a book here written by Antoinette Brown?
+a7-c2.txt

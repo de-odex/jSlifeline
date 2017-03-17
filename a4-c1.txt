@@ -1,0 +1,17 @@
+*Roommate 3: She’s always in a hurry, and she always looks at her back.*
+*Roommate 1: Everyone’s doing their own requirements so we didn’t have time to talk about it.*
+
+<i>It looks like someone’s following her. Where does she usually go during Fridays?</i>
+
+*Roommate 3: Before the bell rings, she goes to the gazebo to study quietly.*
+*Roommate 1: Yeah, and she goes to the cafeteria or the lib during universal breaks.*
+*Roommate 2: Since she stays at the dorm during weekends, she leaves early (4:30PM) to go to Trinoma to buy school-related materials in National Bookstore.*
+*Roommate 1: Oh yeah, she also likes vanilla, especially the scent of it.*
+*Roommate 3: You don’t want to make her take medicines, especially tablets. She hates those kind of stuff. *
+*Roommate 2: I agree.*
+*Roommate 1: She doesn’t usually room hop.*
+*Roommate 2: She lost her pencil case one time. Then she lost her Muji pen, with a pink washi tape the next day. She started getting paranoid, as she thinks someone also took her El Fili on the third day. And the next day, someone tore her fictional books.*
+$Thank you, I think I can work with that already. (MISSION FAILED)
+a14-c1.txt
+$Thank you for the information. Can I check the dorm now?
+a14-c2.txt

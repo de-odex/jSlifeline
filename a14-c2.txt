@@ -1,0 +1,5 @@
+*The room numbers are not properly arranged. Some of the numbers are missing.*
+$Tell the dorm manager
+a5-c1.txt
+$Ignore it.
+a5-c2.txt

@@ -1,0 +1,5 @@
+*Dorm Manager: We checked her room for possible clues. Their room looks the same, except for unusual marks on the rims of her bed.*
+$Oh, I see.
+a13-c1.txt
+$What other things did you see?
+a13-c1.txt
