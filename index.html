@@ -41,7 +41,9 @@
 				console.log(reader.readyState) //gives 1 (?!?!?!)
 				console.log(reader.status) // gives 0 (WHAT THE FUCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK)
 				reader.onreadystatechange = function(){
-					if (reader.readyState === 4 && reader.status === 200) {  
+					console.log(reader.readyState) 
+					console.log(reader.status)
+					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); 
 					}
