@@ -36,7 +36,7 @@
 			var text1, text2
 			var vind = []
 			function readtxt(evt){
-				console.log("Now reading " + evt)
+				console.log("Now reading " + evt) //debug
 				if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 					reader = new XMLHttpRequest();
 				} 
@@ -46,8 +46,8 @@
 				reader.onreadystatechange = function(){
 					console.log("readystate = " + reader.readyState) //debug
 					console.log("status code " + reader.status) //debug
-					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
-						resultreadfile = reader.responseText; 
+					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) { //if the text is ready
+						resultreadfile = reader.responseText; //read the text and parse
 						resultreadfilearr = reader.responseText.split("\n"); //splits the text to readable ones
 
 						for (var i = 0; i < resultreadfilearr.length; i++) { //parses the text into the document
@@ -61,7 +61,7 @@
 								console.log("next 2 files are "+ text1 + ", " + text2) //debug
 								if (j==1){
 									console.log("j==1 pass") //debug
-									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").disabled=true;$(".2,.1").className = "done"})
+									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").disabled=true;$(".2,.1").className = "done"}) 
 								}
 								else if (j==2) {
 									console.log("j==2 pass") //debug
