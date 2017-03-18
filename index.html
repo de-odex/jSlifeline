@@ -45,7 +45,7 @@
 				}
 				reader.onreadystatechange = function(){
 					console.log("readystate = " + reader.readyState) //debug
-					console.log("status code "reader.status) //debug
+					console.log("status code " + reader.status) //debug
 					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); //splits the text to readable ones
