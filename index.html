@@ -36,6 +36,7 @@
 			var text1, text2
 			var vind = []
 			function readtxt(evt){
+				console.log("Now reading " + evt)
 				if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 					reader = new XMLHttpRequest();
 				} 
@@ -43,8 +44,8 @@
 					reader = new ActiveXObject("Microsoft.XMLHTTP");
 				}
 				reader.onreadystatechange = function(){
-					console.log(reader.readyState) 
-					console.log(reader.status)
+					console.log("readystate = " + reader.readyState) //debug
+					console.log("status code "reader.status) //debug
 					if (reader.readyState == 4 && (reader.status == 200 || reader.status == 304)) {  
 						resultreadfile = reader.responseText; 
 						resultreadfilearr = reader.responseText.split("\n"); //splits the text to readable ones
@@ -54,11 +55,10 @@
 							
 							if (resultreadfilearr[i].substr(0, 1) == "$"){
 								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
-								console.log("j = " + j) //debug
 								vind[j] = i+1
 								text1 = resultreadfilearr[vind[1]]
 								text2 = resultreadfilearr[vind[2]]
-								console.log(text1 + ", " + text2) //debug
+								console.log("next 2 files are "+ text1 + ", " + text2) //debug
 								if (j==1){
 									console.log("j==1 pass") //debug
 									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").disabled=true;$(".2,.1").className = "done"})
