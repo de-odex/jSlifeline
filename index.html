@@ -6,7 +6,15 @@
 		<script type="text/javascript" src="./jquery/jquery.js"></script>			<!--for consistency and speed-->
 		<script type="text/javascript" src="./jquery-ui/jquery-ui.js"></script>		<!--same as above-->
 		<script type="text/javascript">
-			var filename1, filename2
+			//vars
+			var firstfile = "a0.txt"
+			var gamefolder = "game1"
+
+
+			//calcs
+			var gamedata = gamefolder + "/"
+
+
 			//tasks: jquery UI animate, js read text, etc... 
 			//day night cycle | if black to white jS PLEASE!!!!! //success
 			function daynight(hrmin){ //time in minutes
@@ -61,11 +69,11 @@
 								console.log("next 2 files are "+ text1 + ", " + text2) //debug
 								if (j==1){
 									console.log("j==1 pass") //debug
-									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";$(".2").disabled=true;$(".2,.1").className = "done"}) 
+									$(".1").one("click", function() {readtxt(text1);this.style.backgroundColor = "green";}) 
 								}
 								else if (j==2) {
 									console.log("j==2 pass") //debug
-									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";$(".1").disabled=true;$(".2,.1").className = "done"})
+									$(".2").one("click", function() {readtxt(text2);this.style.backgroundColor = "green";})
 									j=0
 								}
 								j++
@@ -81,12 +89,16 @@
 						}
 					}
 				}
-				reader.open('GET', evt, true); 
+				reader.open('GET', gamedata+evt, true); 
 				reader.send(null);
 
 			}
 
-
+			function intro(){
+				name = document.getElementById("nameinput").value
+				document.getElementById("textanimation").insertAdjacentHTML('afterbegin', "<p>Hi " + name + ", A high school student is missing. You, as an investigator, have to look for clues and find the girl and the kidnapper.</p>")
+				readtxt(firstfile)
+			}
 
 			//when i need it
 			$(function(){
@@ -94,6 +106,9 @@
 				var time = 0;
 				daynight(time)
 				
+				document.getElementById("namebtn").addEventListener("click", function(){
+					intro(); this.disabled = true
+				})
 				
 			});
 		</script>
@@ -120,15 +135,5 @@
 				<p>What is your name?: </p><input type="text" id="nameinput"/><input type="button" id="namebtn"/>
 			</div>
 		</div>
-		<script type="text/javascript">
-			function intro(){
-				name = document.getElementById("nameinput").value
-				document.getElementById("textanimation").insertAdjacentHTML('afterbegin', "<p>Hi " + name + ", A high school student is missing. You, as an investigator, have to look for clues and find the girl and the kidnapper.</p>")
-				readtxt("a0.txt")
-			}
-			document.getElementById("namebtn").addEventListener("click", function(){
-				intro(); this.disabled = true
-			})
-		</script>
 	</body
 </html>
