@@ -62,7 +62,7 @@
 							//setTimeout(function(){
 							
 							if (resultreadfilearr[i].substr(0, 1) == "$"){
-								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
+								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"gamebtn" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
 								vind[j] = i+1
 								text1 = resultreadfilearr[vind[1]]
 								text2 = resultreadfilearr[vind[2]]
@@ -123,9 +123,19 @@
 				text-align: center;
 				text-overflow: clip;
 			}
-			button{
-				display: block;
+			div{
+				text-align: center;
+			}
+			.gamebtn{
+				display: inline-block;
 				margin: 50px auto;
+				border: none;
+				background-color: #4CAF50;
+				text-align: center;
+				padding: 15px;
+				text-decoration: none;
+				color: white;
+				cursor: pointer;
 			}
 		</style>
 	</head>
