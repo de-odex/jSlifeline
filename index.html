@@ -62,7 +62,7 @@
 							//setTimeout(function(){
 							
 							if (resultreadfilearr[i].substr(0, 1) == "$"){
-								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"gamebtn" + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
+								document.getElementById("textanimation").insertAdjacentHTML('beforeend', "<input type=\"button\" class=\"gamebtn, " + j + "\" value=\"" + resultreadfilearr[i].substr(1,resultreadfilearr[i].length -1) + "\"></input>")
 								vind[j] = i+1
 								text1 = resultreadfilearr[vind[1]]
 								text2 = resultreadfilearr[vind[2]]
